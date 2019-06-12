@@ -3,27 +3,48 @@
     <div class="row">
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
+        <h2>Test Form for Post API</h2>
+
+        {{!-- MODAL --}}
+        <div class="modal fade" id="formModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Oops! Please make sure you have defined a <b>Question</b> and <b>Answer</b>. Also, make sure you selected a <b>Category</b> from the dropdown.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {{!-- FORM --}}
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+            <label for="question-text">Input Question Here</label>
+            <input type="text" id="question-text" class="form-control" aria-describedby="question-text" placeholder="Enter Example Text">
           </div>
           <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+          <select id="category-menu">
+            <option value="default">Please Select a Category</option>
+            <option value="Javascript">Javascript</option>
+            <option value="HTML">HTML</option>
+          </select>
           </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
+          <div class="form-group">
+            <label for="answer-text">Answer</label>
+            <textarea class="form-control" id="answer-description" aria-describedby="answer-description" placeholder="Enter Example Description"></textarea>
+          </div>
         </form>
-        <h3>Examples:</h3>
-        {{!-- <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul> --}}
+          <button id="submit" class="btn btn-primary float-right">Submit</button>
       </div>
     </div>
   </div>
