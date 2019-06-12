@@ -22,12 +22,12 @@ var API = {
       type: "GET"
     });
   },
-  deleteExample: function(id) {
-    return $.ajax({
-      url: "api/examples/" + id,
-      type: "DELETE"
-    });
-  }
+  // deleteExample: function(id) {
+  //   return $.ajax({
+  //     url: "api/examples/" + id,
+  //     type: "DELETE"
+  //   });
+  // }
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
