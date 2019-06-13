@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   let Card = sequelize.define("Card", {
-    // id: DataTypes.INTEGER,
+    author: DataTypes.STRING,
     category: DataTypes.STRING,
     question: DataTypes.STRING,
     answer: DataTypes.TEXT
