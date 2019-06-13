@@ -13,28 +13,6 @@
             <strong>Description:</strong> {{example.description}}</p>
             <a href="/">← Back To Home</a> --}}
             <script type="text/javascript">
-
-        $("#addburger").on("submit", function (event) {
-            event.preventDefault();
-            // define a new variable with burger info
-            let newburger = {
-                burger_name: $("#addburger [name=burger]").val().trim(), // gets the value from text input area with name "burger"
-                devoured: 0 // automatically assign a false to devoured since it is ne
-            };
-            console.log(newburger)
-
-            // Send the POST request with the new burger.
-            $.ajax("/api/burgers", {
-                type: "POST",
-                data: newburger
-            }).then(
-                function () {
-                    console.log("added new burger");
-                    // Reload the page to get the updated list of burgers
-                    location.reload();
-                }
-            );
-        });
         </div>
       </div>
     </div>
