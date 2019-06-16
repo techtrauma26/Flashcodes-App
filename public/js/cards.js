@@ -1,15 +1,16 @@
 $(document).ready(function () {
 
-    // //Initialize the Carousel
-    // $(".carousel").carousel()({
-    //     indicators: true,
-    //     dist: -200,
-    //     padding: 100
-    // })
+    // perform a get request to get a list of subject to build out the sidebar menu
+    $.get("/api/categories", function (dbArray) {
+        // take each item and use jQuery to build out the sidebar categories
+        for (let i = 0; i < dbArray.length; i++) {
+            $("#sidebar").append(`<a href="#!" class="collection-item card-subject" data-id="${dbArray[i].DISTINCT}">${dbArray[i].DISTINCT}</a>`)
+        }
+    });
 
 
     //Listening for Subject selection to pull applicable cards from API GET route.
-    $(".card-subject").on("click", function () {
+      $("#sidebar").on("click", ".card-subject", function () {
 
 
         // document.addEventListener('DOMContentLoaded', function () {
@@ -54,9 +55,9 @@ $(document).ready(function () {
             carouselCard.html(`
             <label>
                 <input type="checkbox" />
-                <div class="card">
-                     <div class="front">${cardArray[i].question}</div>
-                    <div class="back">${cardArray[i].answer}</div>
+                <div class="card valign-wrapper center-align" >
+                     <div class="front valign-wrapper center-align">${cardArray[i].question}</div>
+                    <div class="back valign-wrapper center-align">${cardArray[i].answer}</div>
                 </div>
             </label>`);
             console.log("Q:", cardArray[i].question)
