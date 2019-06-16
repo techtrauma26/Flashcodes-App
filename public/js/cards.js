@@ -4,25 +4,23 @@ $(document).ready(function () {
     $.get("/api/categories", function (dbArray) {
         // take each item and use jQuery to build out the sidebar categories
         for (let i = 0; i < dbArray.length; i++) {
-            $("#sidebar").append(`<a href="#!" class="collection-item card-subject" data-id="${dbArray[i].DISTINCT}">${dbArray[i].DISTINCT}</a>`)
+            $("#sidebarSub").append(`<a href="#!" class="collection-item card-subject" data-id="${dbArray[i].DISTINCT}">${dbArray[i].DISTINCT}</a>`)
+        }
+    });
+
+    // perform a get request to get a list of subject to build out the sidebar menu
+    $.get("/api/authors", function (dbArray) {
+        // take each item and use jQuery to build out the sidebar categories
+        for (let i = 0; i < dbArray.length; i++) {
+            $("#sidebarAuth").append(`<a href="#!" class="collection-item card-author" data-id="${dbArray[i].DISTINCT}">${dbArray[i].DISTINCT}</a>`)
         }
     });
 
 
+
+
     //Listening for Subject selection to pull applicable cards from API GET route.
-      $("#sidebar").on("click", ".card-subject", function () {
-
-
-        // document.addEventListener('DOMContentLoaded', function () {
-        //     var elems = document.querySelectorAll('.carousel');
-        //     var instances = M.Carousel.init(elems, {
-        //         indicators: true,
-        //         dist: -200,
-        //         padding: 100
-        //     });
-
-        // });
-
+    $("#sidebarSub").on("click", ".card-subject", function () {
 
         $("#cardCarousel").empty();
 
@@ -33,7 +31,22 @@ $(document).ready(function () {
             console.log("Cards", data);
             renderCards(data)
 
+            $(".carousel").carousel();
 
+        });
+    });
+
+    //Listening for Author selection to pull applicable cards from API GET route.
+    $("#sidebarAuth").on("click", ".card-author", function () {
+
+        $("#cardCarousel").empty();
+
+        let author = $(this).data("id");
+        console.log("Author:", author)
+
+        $.get("/api/author/" + author, function (data) {
+            console.log("Author", data);
+            renderCards(data)
 
             $(".carousel").carousel();
 
@@ -41,7 +54,6 @@ $(document).ready(function () {
 
 
     });
-
 
     function renderCards(data) {
         let cardArray = data
