@@ -1,5 +1,5 @@
 {
-  "name": "flashcodes",
+  "name": "project2",
   "version": "1.0.0",
   "description": "Project 2 Starter",
   "main": "server.js",
@@ -12,13 +12,9 @@
   },
   "license": "ISC",
   "dependencies": {
-    "classie": "^1.0.0",
     "dotenv": "^8.0.0",
-    "dynamics.js": "^1.1.5",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "jquery": "^3.4.1",
-    "materialize-css": "^1.0.0-rc.2",
     "mysql2": "^1.6.5",
     "nodemon": "^1.19.1",
     "sequelize": "^5.8.9"
