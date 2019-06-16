@@ -44,6 +44,19 @@ module.exports = function (app) {
     });
   });
   
+    // this route returns a list of all distinct authors we have questions for
+    app.get("/api/authors", function (req, res) {
+      db.Card.aggregate('author', 'DISTINCT', { plain: false }
+      ).then(function (dbReturn) {
+        // want to pass forward just an array with all the categories and no extra data
+        let authsArray = [];
+        for (let i = 0; i < dbReturn.glength; i++) {
+          authsArray.push(dbReturn[i].dataValues); // take only the datavalues from the db pull and insert into the array.
+        }
+        res.json(dbReturn); // return the shuffled cards to the API request
+      });
+    });
+
   // Create a new example
   app.post("/api/cards", function (req, res) {
     db.Card.create(req.body).then(function (dbReturn) {

@@ -41,7 +41,7 @@ $(document).ready(function () {
         $questionText.val("");
         $answerDescription.val("");
         $categoryText.val("default");
-        $authorText.val("");
+
       });
     }
     // if the form wasn't properly filled out, show the user a modal.

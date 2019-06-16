@@ -1,3 +1,7 @@
+
+body {
+  background-color: black;
+}
 /* .flip-container {
   perspective: 1000px;
 } */
@@ -123,13 +127,46 @@ label:hover :checked + .card {
   box-shadow: 0 20px 20px rgba(255,255,255,.2);
 }
 
-li {
+.collection {
   color: black;
 }
 
-.carousel-item {
-  width: 1000px !important;
-  height: 800px !important;
+.carousel {
+  margin-top: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  /* border: 2px solid black; */
+  width: 90%;
+  min-width: 50vw;
+  min-height: 60vh;
   text-align: center;
 }
 
+.carousel-item {
+  width: 60% !important;
+  height: 100% !important;
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+
+#main {
+  min-height: 80vh;
+}
+.holder{
+  height: 100%;
+}
+
+.title{
+  padding-left: 1rem;
+}
+
+.q, .a {
+  margin: 0 auto;
+  /* vertical-align: middle; */
+}
+
+.link-text {
+  font-size: large;
+}
