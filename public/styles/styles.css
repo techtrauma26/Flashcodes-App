@@ -50,7 +50,7 @@ footer {
 }
 
 /* NEW STUFF */
-label {
+.flip {
   -webkit-perspective: 1000px;
   perspective: 1000px;
   -webkit-transform-style: preserve-3d;
@@ -75,18 +75,22 @@ label {
   -webkit-transition: all 600ms;
   transition: all 600ms;
   z-index: 20;
+  flex-wrap: wrap;
+  
 }
 
   .card div {
       position: absolute;
       height: 100%;
       width: 100%;
-      background: #FFF;
+      background: pink;
       text-align: center;
+      flex-wrap: wrap;
       line-height: 200px;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       border-radius: 2px;
+      
   }
 
   .card .back {
@@ -121,3 +125,7 @@ li {
   color: black;
 }
 
+.carousel-item {
+  width: 75%;
+  height: auto;
+}

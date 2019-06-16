@@ -71,8 +71,37 @@
                 </div>
             </div> -->
     <div class="col s9">
-        <div class="carousel" id="cardCarousel" width= "50px">
-
+        <div class="carousel" id="cardCarousel" data-indicators="true">
+            {{!-- <a class="carousel-item" href="#!">
+                <label class="flip">
+                    <input type="checkbox" />
+                    <div class="card">
+                        <div class="front">What is the main difference between a class and an ID in HTML?</div>
+                        <div class="back">A class can be applied to multiple elements while an ID can only be applied to
+                            one element</div>
+                    </div>
+                </label>
+            </a>
+            <a class="carousel-item" href="#!">
+                <label class="flip">
+                    <input type="checkbox" />
+                    <div class="card">
+                        <div class="front">Question 2</div>
+                        <div class="back">Answer 2</div>
+                    </div>
+                </label>
+            </a>
+            <a class="carousel-item" href="#!">
+                <label class="flip">
+                    <input type="checkbox" />
+                    <div class="card">
+                        <div class="front">
+                            <p>Question 3</p>
+                        </div>
+                        <div class="back">Answer 3</div>
+                    </div>
+                </label>
+            </a> --}}
 
         </div>
 
@@ -106,16 +135,24 @@
     <script type="text/javascript" src="js/materialize.js"></script>
 
     <script src="/js/cards.js"></script>
-    <script>
+    {{!-- <script>
 
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.carousel');
             var instances = M.Carousel.init(elems, {});
-        });
-    </script>
+
+        }); --}}
 
 
-    {{!-- <script>    <script src="https://code.jquery.com/jquery.js"></script>
+//        {{!-- $(".carousel").carousel()({
+       //     indicators: true,
+     //       dist: -200,
+   //         padding: 100
+ //       }) --}}
+    {{!-- </script> --}}
+
+
+    {{!-- <script>    < script src = "https://code.jquery.com/jquery.js" ></script>
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.sidenav');
             var instances = M.Sidenav.init(elems, options);
