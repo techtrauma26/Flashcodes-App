@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"> -->
 
     <title>Home Page</title>
 </head>
@@ -36,7 +35,17 @@
 
     }
 
-    .bgimg-1 {
+    .bgimg-4 {
+        background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+        min-height: 100%;
+        opacity: 0.65;
+        position: relative;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+     .bgimg-1 {
         background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
         min-height: 100%;
         position: relative;
@@ -45,7 +54,6 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
-
     .bgimg-2 {
         background-image: url("https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80");
         min-height: 400px;
@@ -79,7 +87,8 @@
 
         .bgimg-1,
         .bgimg-2,
-        .bgimg-3 {
+        .bgimg-3 
+        .bgimg-4{
             background-attachment: scroll;
         }
     }
@@ -94,10 +103,11 @@
                 <li class="hoverable"><a href="/add">Create Cards!</a></li>
                 <li class="hoverable"><a href="/cards">View Cards!</a></li>
             </ul>
-
         </div>
     </nav>
+   <!-- Main Content -->
 
+    <!-- Parallex Image 1 -->
     <div class="bgimg-1" style="background: black">
         <div class="container caption">
             <div class="row">
@@ -105,33 +115,34 @@
                     <img src="http://www.edimprovement.org/wp-content/uploads/2018/07/StefanoPasqualin_Flikr.jpg"
                         alt="brain"
                         style="width:300px;height:300x; display: block; margin-right: auto; margin-left: auto; width: 40%;">
-                    <h4 class=" center-align" style="color:deeppink; ">FLASHCODES</h4>
+                    <h4 class=" pink-text center-align">FLASHCODES</h4>
 
-                    <h6 class="center-align" style="color: lavenderblush">Study in style </h6>
+                    <h6 class="red-text text-lighten-5 center-align" >Study in style </h6>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Intro to Flashcodes -->
     <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
         <h3 style="text-align:center;">What is FlashCodes? </h3>
         <p>FlashCodes is a studying application with flashcards, notes and quizzes created by users. Create flashcards
             to help students like yourself learn to code. blah blah blah..need to update it. </p>
     </div>
-
+    <!-- Parallex Image 2 -->
     <div class="bgimg-2">
         <div class="caption">
             <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
         </div>
     </div>
-
+    <!-- Flashcode Features -->
     <div class="container">
         <div class="row">
+         <!-- Feature 1 -->
             <div class="col m4 s12">
                 <div class="icon-block">
-
                     <h2 class="center pink-text">
-                        <i class="material-icons">flash_on</i>
+                        <i class="material-icons">devices</i>
                     </h2>
                     <h5 class="center">Study Anywhere</h5>
                     <p class="light" style="text-align: center">
@@ -139,58 +150,70 @@
                         everywhere.
                     </p>
                 </div>
-
             </div>
+         <!-- Feature 2 -->
             <div class="col m4 s12">
                 <div class="icon-block">
                     <h2 class="center pink-text">
-                        <i class="material-icons">group</i>
+                        <i class="material-icons">developer_mode</i>
                     </h2>
                     <h5 class="center">Learn Faster</h5>
                     <p class="light" style="text-align: center">
-                        By utilizing flashcards, you will be retaining the information your learned faster. Practicing
-                        what you leanred is a key part of the learning process.
+                            By utilizing flashcards, you will be retaining the information your learned faster. Practicing what you leanred is a key part of the learning process. 
                     </p>
                 </div>
             </div>
+         <!-- Feature 3 -->
             <div class="col m4 s12">
                 <div class="icon-block">
                     <h2 class="center pink-text">
-                        <i class="material-icons">settings</i>
+                        <i class="material-icons">import_contacts</i>
                     </h2>
                     <h5 class="center">Study Smarter</h5>
                     <p class="light" style="text-align: center">
-                        Improve your programming skills by creating online studying materials. FlashCodes's simple tools
-                        can help students improve recall and learn snippets of code faster.
+                            Improve your programming skills by creating online studying materials. FlashCodes's simple tools can help students improve recall and learn snippets of code faster. 
                     </p>
                 </div>
             </div>
         </div>
     </div>
+    <!-- End of Flashcode Features -->
 
-
-    <div class="bgimg-3">
-        <div class="caption">
-            <span class="border" style="background-color:transparent;font-size:25px;color:mistyrose;"></span>
-        </div>
-    </div>
+    <!-- Parallex Image 3 -->
+    <div class="bgimg-3"></div>
+    <!-- Get Started Button : Enters into user's site to study and create flashcards -->
     <div style="position:relative;">
-        <div style="color:#ddd;background-color:royalblue;text-align:center;padding:50px 80px;text-align: justify;">
-            <p style="text-align: center; font-size: 20px;">Get started today! </p>
+            <div class= "indigo accent-4 " style="padding:50px 80px;text-align: center;">
+                    <a class="pink red-text text-lighten-5 waves-effect waves-light btn-large"><i class="material-icons left">school</i>Get Started Today!</a>            </div>
         </div>
-    </div>
-
-    </div>
-
-    <div class="bgimg-1">
-
-    </div>
+    <!-- Parallex Image 4 -->
+    <div class="bgimg-4"></div>
+    <!-- Footer -->
     <div style="position:relative;">
-        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-            <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
-        </div>
+        <footer class="page-footer black ">
+          <div class="container ">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class=" center-align pink-text">FLASHCODES</h5>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" white black-text footer-copyright">
+            <div class="container">
+            © 2019 Copyright 
+            </div>
+          </div>
+        </footer>            
+    </div>
+    <!-- End Footer -->
 
-        <div id="extension-is-installed"></div>
+    <div id="extension-is-installed"></div>
 </body>
 
 </html>
