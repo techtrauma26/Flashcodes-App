@@ -16,9 +16,6 @@ $(document).ready(function () {
         }
     });
 
-
-
-
     //Listening for Subject selection to pull applicable cards from API GET route.
     $("#sidebarSub").on("click", ".card-subject", function () {
 
@@ -52,7 +49,6 @@ $(document).ready(function () {
 
         });
 
-
     });
 
     function renderCards(data) {
@@ -60,16 +56,22 @@ $(document).ready(function () {
 
         for (let i = 0; i < cardArray.length; i++) {
 
-            const carouselCard = $("<a class='carousel-item' href='#!'>")
+            const carouselCard = $(`<a class="carousel-item" href="#!" data-id="${i}">`)
 
-            // carouselCard.addClass("carousel-item");
-            carouselCard.data("id", i);
+
+
             carouselCard.html(`
             <label>
-                <input type="checkbox" />
+                <input type="checkbox" class="checker" id="cb${i}" />
                 <div class="card valign-wrapper center-align" >
-                     <div class="front valign-wrapper center-align">${cardArray[i].question}</div>
-                    <div class="back valign-wrapper center-align">${cardArray[i].answer}</div>
+                    <div class="front row valign-wrapper center-align">
+                    <p class="center-align q">${cardArray[i].question}</p>
+                    </div>
+                    <div class="back center-align valign-wrapper">
+                    <p class="center-align a "> ${cardArray[i].answer}</p>
+                    </div>
+                   
+                        
                 </div>
             </label>`);
             console.log("Q:", cardArray[i].question)
@@ -78,5 +80,30 @@ $(document).ready(function () {
         }
     }
 
+    //Listening for Subject selection to pull applicable cards from API GET route.
+    $("#sidebarSub").on("click", ".card-subject", function () {
+
+        $("#cardCarousel").empty();
+
+        let subject = $(this).data("id");
+        console.log("Subject:", subject)
+
+        $.get("/api/cards/" + subject, function (data) {
+            console.log("Cards", data);
+            renderCards(data)
+
+            $(".carousel").carousel();
+
+        });
+    });
+
+
+
+    $("#cardCarousel").scroll(function () {
+
+        $(".checker").prop("unchecked", false);
+    });
+
+    
 
 })
