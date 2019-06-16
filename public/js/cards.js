@@ -25,8 +25,7 @@ $(document).ready(function () {
             const carouselCard = $("<a>")
 
             carouselCard.addClass("carousel-item");
-            carouselCard.css(["width: '50px'"]);
-            carouselCard.data("id", i);
+             carouselCard.data("id", i);
             carouselCard.html(`
             <label>
                 <input type="checkbox" />
