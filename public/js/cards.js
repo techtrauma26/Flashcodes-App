@@ -1,10 +1,28 @@
 $(document).ready(function () {
 
-    //Initialize the Carousel
-    $(".carousel").carousel()
+    // //Initialize the Carousel
+    // $(".carousel").carousel()({
+    //     indicators: true,
+    //     dist: -200,
+    //     padding: 100
+    // })
+
 
     //Listening for Subject selection to pull applicable cards from API GET route.
     $(".card-subject").on("click", function () {
+
+
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     var elems = document.querySelectorAll('.carousel');
+        //     var instances = M.Carousel.init(elems, {
+        //         indicators: true,
+        //         dist: -200,
+        //         padding: 100
+        //     });
+
+        // });
+
+
         $("#cardCarousel").empty();
 
         let subject = $(this).data("id");
@@ -13,7 +31,14 @@ $(document).ready(function () {
         $.get("/api/cards/" + subject, function (data) {
             console.log("Cards", data);
             renderCards(data)
+
+
+
+            $(".carousel").carousel();
+
         });
+
+
     });
 
 
@@ -22,10 +47,10 @@ $(document).ready(function () {
 
         for (let i = 0; i < cardArray.length; i++) {
 
-            const carouselCard = $("<a>")
+            const carouselCard = $("<a class='carousel-item' href='#!'>")
 
-            carouselCard.addClass("carousel-item");
-             carouselCard.data("id", i);
+            // carouselCard.addClass("carousel-item");
+            carouselCard.data("id", i);
             carouselCard.html(`
             <label>
                 <input type="checkbox" />
