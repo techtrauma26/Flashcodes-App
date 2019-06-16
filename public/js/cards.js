@@ -19,6 +19,7 @@ $(document).ready(function () {
     //Listening for Subject selection to pull applicable cards from API GET route.
     $("#sidebarSub").on("click", ".card-subject", function () {
 
+        $(".intro").hide();
         $("#cardCarousel").empty();
 
         let subject = $(this).data("id");
@@ -36,6 +37,7 @@ $(document).ready(function () {
     //Listening for Author selection to pull applicable cards from API GET route.
     $("#sidebarAuth").on("click", ".card-author", function () {
 
+        $(".intro").hide();
         $("#cardCarousel").empty();
 
         let author = $(this).data("id");
@@ -62,7 +64,7 @@ $(document).ready(function () {
 
             carouselCard.html(`
             <label>
-                <input type="checkbox" class="checker" id="cb${i}" />
+                <input type="checkbox" class="checker" id="cb${i}" unchecked />
                 <div class="card valign-wrapper center-align" >
                     <div class="front row valign-wrapper center-align">
                     <p class="center-align q">${cardArray[i].question}</p>
@@ -101,9 +103,17 @@ $(document).ready(function () {
 
     $("#cardCarousel").scroll(function () {
 
-        $(".checker").prop("unchecked", false);
+        $("input[type='checkbox']").prop("checked", false);
+        $(".checker").prop("checked", false);
     });
 
-    
+    $('input[type="checkbox"]').click(function(){
+        if($(this).prop("checked") == true){
+            alert("Checkbox is checked.");
+        }
+        else if($(this).prop("checked") == false){
+            alert("Checkbox is unchecked.");
+        }
+    });
 
 })
