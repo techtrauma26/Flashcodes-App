@@ -56,8 +56,8 @@ footer {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   display: block;
-  width: 300px;
-  height: 200px;
+  width: 1000px;
+  height: 800px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -83,10 +83,11 @@ footer {
       position: absolute;
       height: 100%;
       width: 100%;
-      background: pink;
+      background: rgb(255, 242, 219);
+      color: black;
       text-align: center;
-      flex-wrap: wrap;
-      line-height: 200px;
+      line-height: 2rem;
+      font-size: xx-large;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       border-radius: 2px;
@@ -94,8 +95,9 @@ footer {
   }
 
   .card .back {
-      background: #222;
-      color: #FFF;
+      background: lightgreen;
+      color: black;
+      text-align: center;
       -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg);
   }
@@ -126,6 +128,8 @@ li {
 }
 
 .carousel-item {
-  width: 75%;
-  height: auto;
+  width: 1000px !important;
+  height: 800px !important;
+  text-align: center;
 }
+
