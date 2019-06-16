@@ -8,6 +8,17 @@ module.exports = function(app) {
       });
   });
 
+  app.get("/add", function(req, res) {
+    res.render("add", {
+      msg: "Welcome!"
+    });
+  });
+
+  app.get("/cards", function(req, res) {
+    res.render("cards", {
+      msg: "Welcome!"
+    });
+  });
   // Load example page and pass in an example by id
   // app.get("/example/:id", function(req, res) {
   //   db.Card.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
