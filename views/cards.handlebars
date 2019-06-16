@@ -1,163 +1,56 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="/public/styles/styles.css" media="screen,projection" />
-    <!--Let browser know website is optimized for mobile-->
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"> -->
-
-    <title>Home Page</title>
-</head>
-<style>
-    A
-
-    /* entire container, keeps perspective */
-    .flip-container {
-        perspective: 1000px;
-    }
-
-    /* flip the pane when hovered */
-    .flip-container:hover .flipper,
-    .flip-container.hover .flipper {
-        transform: rotateY(180deg);
-    }
-
-    .flip-container,
-    .front,
-    .back {
-        width: 100%;
-        height: 100%;
-    }
-
-    /* flip speed goes here */
-    .flipper {
-        transition: 0.9s;
-        transform-style: preserve-3d;
-        position: relative;
-    }
-
-    /* hide back of pane during swap */
-    .front,
-    .back {
-        backface-visibility: hidden;
-        a position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    /* front pane, placed above back */
-    .front {
-        z-index: 2;
-        /* for firefox 31 */
-        transform: rotateY(0deg);
-    }
-
-    /* back, initially hidden pane */
-    .back {
-        transform: rotateY(180deg);
-    }
-
-    header,
-    main,
-    footer {
-        padding-left: 300px;
-    }
-
-    @media only screen and (max-width : 992px) {
-
-        header,
-        main,
-        footer {
-            padding-left: 0;
-        }
-    }
-</style>
-
-<body>
-    <!-- Navbar goes here -->
-    <!-- <nav> 
-  
-             
-            </nav> -->
-
-    <header>
-        <nav class="top-nav" style="height: 100px">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <div class="row">
-                        <div class="col s12 m10">
-                            <h1 class="header">FlashCodes</h1>
-                        </div>
+<header>
+    <nav class="top-nav" style="height: 100px">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="row">
+                    <div class="col s12 m10">
+                        <h1 class="header">FlashCodes</h1>
                     </div>
                 </div>
             </div>
-
-
-            <ul id="slide-out" class="sidenav sidenav-fixed">
-                <li>
-                    <div class="user-view">
-                        <div class="background">
-                            <img src="/brain.jpg">
-                        </div>
-                        <a href="#name"><span class="pink-text name">John Doe</span></a>
-                    </div>
-                </li>
-                <li class="search">
-                    <div class="search-wrapper">
-                        <input id="search" placeholder="Search"><i class="material-icons">search</i>
-                        <div class="search-results"></div>
-                    </div>
-                </li>
-                <div class="divider"></div>
-                <li class="addMore"><a href="/add">Create Cards!</a></li>
-                <div class="divider"></div>
-                </div>
-                </li>
-                <li>
-                    <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-light" tabindex="0">CSS</a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li><a href="">Objectives</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="bold active"><a class="collapsible-header waves-effect waves-light"
-                                tabindex="0">JavaScript</a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li><a href="">Objectives</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <div class="divider"></div>
-                </li>
-                <li><a class="subheader">Subheader</a></li>
-                <li class="bold"><a href="" class="waves-effect waves-purple">Settings</a></li>
-                <li class="bold"><a href="" class="waves-effect">Logout</a></li>
-                <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-            </ul>
-            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        </nav>
-    </header>
-    <!-- Page Layout here -->
-    <div id="main" class="row">
-        <!-- Side navigation panel -->
-        <div class="col l3 s3">
         </div>
-        <!-- Main Content -->
 
-        <!-- <div class="row">
+
+        <ul id="slide-out" class="sidenav sidenav-fixed">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="/brain.jpg">
+                    </div>
+                    <a href="#name"><span class="pink-text name">John Doe</span></a>
+                </div>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li class="addMore"><a href="/add">Create Cards!</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li>
+
+                <div class="collection">
+                    <strong>Study Cards by Subject</strong>
+                    <a href="#!" class="collection-item card-subject" data-id="HTML">HTML</a>
+                    <a href="#!" class="collection-item card-subject" data-id="Sequelize">Sequelize</a>
+            </li>
+        </ul>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </nav>
+</header>
+<!-- Page Layout here -->
+<div id="main" class="row">
+    <!-- Side navigation panel -->
+    <div class="col s3">
+    </div>
+    <!-- Main Content -->
+
+    <!-- <div class="row">
                 <div class="col s12 m6">
                     <div class="card blue-grey darken-2 small">
                         <div class="card-content white-text">
@@ -177,53 +70,12 @@
                     </div>
                 </div>
             </div> -->
-        <div class="row">
-            <div class="col s9">
-                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                        <div class="front">
-                            <div class="row">
-                                <div class="col s12 m12">
-                                    <div class="card black darken-1 medium">
-                                        <div class="card-content white-text">
-                                            <span class="card-title">Flashcard Example 3</span>
-                                            <p>
-                                                We can also use use a click event so the card flips when we click on
-                                                the card :
-                                                $(document).on("click", ".flip-container", function () {
-                                                $(this).toggleClass('hover');
-                                                }); </p>
-                                        </div>
-                                        <div class="card-action">
-                                            <a href="#" class="white-text">This is a link</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="row">
-                                <div class="col s12">
-                                    <div class="card white">
-                                        <div class="card-content black-text">
-                                            <span class="card-title">Card Title</span>
-                                            <p>I am a very simple card. I am good at containing small bits of
-                                                information.
-                                                I am convenient because I require little markup to use effectively.
-                                            </p>
-                                        </div>
-                                        <div class="card-action">
-                                            <a href="#" class="black-text">This is a link</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="col s9">
+        <div class="carousel" id="cardCarousel" width= "50px">
+
+
         </div>
-    </div>
+
     </div>
 
     <!-- Modal Trigger   -->
@@ -248,19 +100,28 @@
             <a href="#!" class="modal-close waves-effect waves-light btn-flat">Create</a>
         </div>
     </div>
-</body>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems, options);
-    });
-    document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('.modal');
-        var instances = M.Modal.init(elems, options);
-    });
+    </body>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+
+    <script src="/js/cards.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {});
+        });
+    </script>
 
 
-
-</script>
-
-</html>
+    {{!-- <script>    <script src="https://code.jquery.com/jquery.js"></script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, options);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems, options);
+        });
+    </script> --}}
