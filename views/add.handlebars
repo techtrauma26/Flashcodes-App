@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
-        <h2>Test Form for Post API</h2>
+        <h2>Create A Card</h2>
 
         {{!-- MODAL --}}
         <div class="modal fade" id="formModal" tabindex="-1" role="dialog">
@@ -17,45 +17,77 @@
               </div>
               <div class="modal-body">
                 <p>Oops! Please make sure you have defined a <b>Question</b> and <b>Answer</b>. Also, make sure you
-                  selected a <b>Category</b> from the dropdown.</p>
+                  selected a <b>Category</b> from the dropdown so we can get you organized!</p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Save changes</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="modal-close waves-effect waves-green" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
         </div>
-
-        {{!-- FORM --}}
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="question-text">Input Question Here</label>
-            <input type="text" id="question-text" class="form-control" aria-describedby="question-text"
-              placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <select id="category-menu">
-              <option value="default">Please Select a Category</option>
-              <option value="Javascript">Javascript</option>
-              <option value="HTML">HTML</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="answer-text">Answer</label>
-            <textarea class="form-control" id="answer-description" aria-describedby="answer-description"
-              placeholder="Enter Example Description"></textarea>
-          </div>
-        </form>
-        <button id="submit" class="btn btn-primary float-right">Submit</button>
       </div>
     </div>
-    <a href="/cards">View Cards!</a>
+    {{!-- FORM --}}
+
+    <div class="row">
+      <div class="input-field col s12">
+        <label>Chose the Card Category</label><br><br>
+        <select class="browser-default" id="category-menu">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="Javascript">Javascript</option>
+          <option value="jQuery">jQuery</option>
+          <option value="Timers">Timers</option>
+          <option value="AJAX">AJAX</option>
+          <option value="Firebase">Firebase</option>
+          <option value="NodeJS">NodeJS</option>
+          <option value="Constructors">Constructors</option>
+          <option value="MySQL">MySQL</option>
+          <option value="Express">Express</option>
+          <option value="Handlebars">Handlebars</option>
+          <option value="Sequelize">Sequelize</option>
+        </select>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea id="question-text" class="materialize-textarea validate"></textarea>
+        <label for="question-text">Input Question Here</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea id="answer-description" class="materialize-textarea"></textarea>
+        <label for="answer-description">Answer</label>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="input-field col s12">
+        <textarea id="author-text" type="text" class="materialize-textarea"></textarea>
+        <label for="author-text">Card Author</label>
+      </div>
+    </div>
+    <div class="row">
+
+      <button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Submit
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col s12">
+        <a href="/cards">View Cards!</a>
+      </div>
+    </div>
+
   </div>
+
+</div>
 </div>
 
-
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
+<script src="/js/add.js"></script>

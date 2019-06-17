@@ -1,3 +1,173 @@
-.list-group-item {
-  line-height: 2.5;
+
+body {
+  background-color: black;
+}
+/* .flip-container {
+  perspective: 1000px;
+} */
+/* flip the pane when hovered */
+/* .flip-container:hover .flipper,
+.flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+.flip-container,
+.front,
+.back {
+  width: 100%;
+  height: auto;
+} */
+/* flip speed goes here */
+/* .flipper {
+  transition: 0.9s;
+  transform-style: preserve-3d;
+  position: relative;
+} */
+/* hide back of pane during swap */
+/* .front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+/* front pane, placed above back */
+/* .front {
+  z-index: 2;
+  /* for firefox 31 */
+  /* transform: rotateY(0deg);
+} */
+/* back, initially hidden pane */
+/* .back {
+  transform: rotateY(180deg);
+} */ */
+header,
+main,
+footer {
+  padding-left: 300px;
+}
+@media only screen and (max-width : 992px) {
+  header,
+  main,
+  footer {
+      padding-left: 0;
+  }
+}
+
+/* NEW STUFF */
+.flip {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  display: block;
+  width: 1000px;
+  height: 800px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+  z-index: 20;
+  flex-wrap: wrap;
+  
+}
+
+  .card div {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: rgb(255, 242, 219);
+      color: black;
+      text-align: center;
+      line-height: 2rem;
+      font-size: xx-large;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 2px;
+      
+  }
+
+  .card .back {
+      background: lightgreen;
+      color: black;
+      text-align: center;
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+  }
+
+label:hover .card {
+  -webkit-transform: rotateY(20deg);
+  transform: rotateY(20deg);
+  box-shadow: 0 20px 20px rgba(50,50,50,.2);
+}
+
+/* input {
+  /* display: none; 
+}*/
+
+
+:checked + .card {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+label:hover :checked + .card {
+  transform: rotateY(160deg);
+  -webkit-transform: rotateY(160deg);
+  box-shadow: 0 20px 20px rgba(255,255,255,.2);
+}
+
+.collection {
+  color: black;
+}
+
+.carousel {
+  margin-top: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  /* border: 2px solid black; */
+  width: 90%;
+  min-width: 50vw;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.carousel-item {
+  width: 60% !important;
+  height: 100% !important;
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+
+#main {
+  min-height: 80vh;
+}
+.holder{
+  height: 100%;
+}
+
+.title{
+  padding-left: 1rem;
+}
+
+.q, .a {
+  margin: 0 auto;
+  /* vertical-align: middle; */
+}
+
+.link-text {
+  font-size: large;
 }
