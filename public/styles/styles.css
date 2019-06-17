@@ -180,8 +180,12 @@ label:hover :checked + .card {
   background-size: cover;
 }
 
-.fa-pencil-alt {
-  color: rgb(199, 79, 129)
+.fa-pencil-alt, .fa-times-circle {
+  color: #EE6E73;
+  padding: 20px;
+}
+.fa-pencil-alt:hover, .fa-times-circle:hover {
+  color: rgb(211, 128, 131);
 }
 /* .fa-pencil-alt {
   position: relative;
@@ -206,3 +210,7 @@ label:hover :checked + .card {
     left: 75%;
   } 
 } */
+
+.delete-toast {
+  background-color: rgb(238, 64, 64);
+}
