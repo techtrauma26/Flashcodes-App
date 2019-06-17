@@ -24,21 +24,21 @@ module.exports = function (app) {
     });
   });
 
-  // this route returns all cards created by a particular author
+  // returns all cards created by a particular author
   app.get("/api/author/:author", function (req, res) {
     db.Card.findAll({ where: { author: req.params.author } }).then(function (dbReturn) {
       res.json(dbReturn); 
     });
   });
 
-  // this route returns the info for a card by ID
+  // returns the info for a card by ID
   app.get("/api/card_id/:card_id", function (req, res) {
     db.Card.findAll({ where: { id: req.params.card_id } }).then(function (dbReturn) {
       res.json(dbReturn); 
     });
   });
 
-  // this route returns a list of all distinct categories we have questions for
+  // returns a list of all distinct categories we have questions for
   app.get("/api/categories", function (req, res) {
     db.Card.aggregate('category', 'DISTINCT', { plain: false }
     ).then(function (dbReturn) {
@@ -51,7 +51,7 @@ module.exports = function (app) {
     });
   });
   
-    // this route returns a list of all distinct authors we have questions for
+    // returns a list of all distinct authors we have questions for
     app.get("/api/authors", function (req, res) {
       db.Card.aggregate('author', 'DISTINCT', { plain: false }
       ).then(function (dbReturn) {
@@ -72,22 +72,30 @@ module.exports = function (app) {
   });
 
   // Update an existing card
-  app.put("/api/update/:card_id"), function (req, res, next) {
-    db.Card.update(
-      {question: req.body.question},
-      {question: req.body.answer},
-      {question: req.body.author},
-      
-      {where: { id: req.params.card_id }}
-    )
-    .then(function([ rowsUpdate, [updatedCard] ]) {
-      res.json(updatedCard)
-    })
-  };
+  app.put("/api/update", function(req, res) {
+    db.Card.update({
+      question: req.body.question,
+      answer: req.body.answer,
+      author: req.body.author,
+    }, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbUpdate) {
+      res.json(dbUpdate);
+    });
+  });
+
   // Delete an example by id
-  // app.delete("/api/cards/:card_id", function(req, res) {
-  //   db.Card.destroy({ where: { card_id: req.params.card_id } }).then(function(dbReturn) {
-  //     res.json(dbReturn);
-  //   });
-  // });
+  app.delete("/api/delete/:id", function(req, res) {
+    // We just have to specify which todo we want to destroy with "where"
+    db.Card.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbTodo) {
+      res.json(dbTodo);
+    });
+
+  });
 };
