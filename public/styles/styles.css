@@ -1,3 +1,7 @@
+
+body {
+  background-color: black;
+}
 /* .flip-container {
   perspective: 1000px;
 } */
@@ -50,14 +54,14 @@ footer {
 }
 
 /* NEW STUFF */
-label {
+.flip {
   -webkit-perspective: 1000px;
   perspective: 1000px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   display: block;
-  width: 300px;
-  height: 200px;
+  width: 1000px;
+  height: 800px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -75,23 +79,29 @@ label {
   -webkit-transition: all 600ms;
   transition: all 600ms;
   z-index: 20;
+  flex-wrap: wrap;
+  
 }
 
   .card div {
       position: absolute;
       height: 100%;
       width: 100%;
-      background: #FFF;
+      background: rgb(255, 242, 219);
+      color: black;
       text-align: center;
-      line-height: 200px;
+      line-height: 2rem;
+      font-size: xx-large;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       border-radius: 2px;
+      
   }
 
   .card .back {
-      background: #222;
-      color: #FFF;
+      background: lightgreen;
+      color: black;
+      text-align: center;
       -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg);
   }
@@ -102,9 +112,10 @@ label:hover .card {
   box-shadow: 0 20px 20px rgba(50,50,50,.2);
 }
 
-input {
-  display: none;
-}
+/* input {
+  /* display: none; 
+}*/
+
 
 :checked + .card {
   transform: rotateY(180deg);
@@ -117,7 +128,81 @@ label:hover :checked + .card {
   box-shadow: 0 20px 20px rgba(255,255,255,.2);
 }
 
-li {
+.collection {
   color: black;
 }
 
+.carousel {
+  margin-top: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  /* border: 2px solid black; */
+  width: 90%;
+  min-width: 50vw;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.carousel-item {
+  width: 60% !important;
+  height: 100% !important;
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+
+#main {
+  min-height: 80vh;
+}
+.holder{
+  height: 100%;
+}
+
+.title{
+  padding-left: 1rem;
+}
+
+.q, .a {
+  margin: 0 auto;
+  /* vertical-align: middle; */
+}
+
+.link-text {
+  font-size: large;
+}
+
+.intro {
+  height: 100vh;
+  width: 100%;
+  background-image: url("/animated.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fa-pencil-alt {
+  color: rgb(199, 79, 129)
+}
+/* .fa-pencil-alt {
+  position: relative;
+  left: 80%;
+  top: -40%;
+  color: rgb(0, 99, 228)
+}
+
+.fa-times-circle {
+  position: relative;
+  left: 85%;
+  top: -40%;
+  color: rgb(0, 99, 228)
+}
+
+@media screen and (max-width: 768px) { 
+  .fa-pencil-alt {
+    left: 70%;
+  }
+  
+  .fa-times-circle {
+    left: 75%;
+  } 
+} */

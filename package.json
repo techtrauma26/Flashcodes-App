@@ -1196,6 +1196,7 @@
     },
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
+<<<<<<< HEAD
     "extend": {
       "dev": true,
       "integrity": "sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==",
@@ -2795,6 +2796,9 @@
       "version": "0.0.7"
     },
     "mysql": "^2.17.1",
+=======
+    "materialize-css": "^1.0.0",
+>>>>>>> 30a0ab556b7ad8ccff097f725de3f72ba700b477
     "mysql2": "^1.6.5",
     "named-placeholders": {
       "integrity": "sha512-wiFWqxoLL3PGVReSZpjLVxyJ1bRqe+KKJVbr4hGs1KWfTZTQyezHFBbuKj9hsizHyGV2ne7EMjHdxEGAybD5SA==",

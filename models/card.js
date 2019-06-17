@@ -3,7 +3,15 @@ module.exports = function(sequelize, DataTypes) {
     author: DataTypes.STRING,
     category: DataTypes.STRING,
     question: DataTypes.STRING,
-    answer: DataTypes.TEXT
+    answer: DataTypes.TEXT,
+    // link: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
+    // ec: {
+    //   type: DataTypes.BOOLEAN,
+    //   defaultValue: false
+    // }
   },
   { 
     timestamps: false,
