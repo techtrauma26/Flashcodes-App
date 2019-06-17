@@ -10,6 +10,70 @@
             </div>
         </div>
 
+        {{!-- Validation MODAL --}}
+        <div class="modal fade" id="updateModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" style="color:black;">Update Current Card</h5>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+      <div class="input-field col s10">
+        <label>Choose the Card Category</label><br>
+        <select class="browser-default" id="category-menu">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="Javascript">Javascript</option>
+          <option value="jQuery">jQuery</option>
+          <option value="Timers">Timers</option>
+          <option value="AJAX">AJAX</option>
+          <option value="Firebase">Firebase</option>
+          <option value="NodeJS">NodeJS</option>
+          <option value="Constructors">Constructors</option>
+          <option value="MySQL">MySQL</option>
+          <option value="Express">Express</option>
+          <option value="Handlebars">Handlebars</option>
+          <option value="Sequelize">Sequelize</option>
+        </select>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <label>Question</label><br>
+        <textarea id="question-text" class="materialize-textarea validate"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <label>Answer</label><br>
+        <textarea id="answer-description" class="materialize-textarea"></textarea>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="input-field col s12">
+        <label>Card Author</label><br>
+        <textarea id="author-text" type="text" class="materialize-textarea"></textarea>
+      </div>
+    </div>
+    <div class="row">
+
+      <button class="btn waves-effect waves-light" type="submit" name="action" id="updateSubmit">Submit
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="modal-close waves-effect waves-green" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <ul id="slide-out" class="sidenav sidenav-fixed">
             <li>
@@ -65,7 +129,11 @@
           
 
         </div>
-
+    </div>
+    <div class="row">
+        <div class="col center-align">
+            <i class="fas fa-pencil-alt fa-2x" style="margin-left: 500px;"></i><i class="fas fa-times-circle fa-2x"></i>
+        </div>
     </div>
 
     {{!-- <!-- Modal Trigger   -->
@@ -109,13 +177,11 @@
  
 
 
-    {{!-- <script>    < script src = "https://code.jquery.com/jquery.js" ></script>
+    {{!-- <script src = "https://code.jquery.com/jquery.js"></script> --}}
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems, options);
+            var instances = M.Sidenav.init(elems);
         });
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.modal');
-            var instances = M.Modal.init(elems, options);
-        });
-    </script> --}}
+        
+    </script>

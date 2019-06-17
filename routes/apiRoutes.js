@@ -27,7 +27,14 @@ module.exports = function (app) {
   // this route returns all cards created by a particular author
   app.get("/api/author/:author", function (req, res) {
     db.Card.findAll({ where: { author: req.params.author } }).then(function (dbReturn) {
-      res.json(dbReturn); // return the shuffled cards to the API request
+      res.json(dbReturn); 
+    });
+  });
+
+  // this route returns the info for a card by ID
+  app.get("/api/card_id/:card_id", function (req, res) {
+    db.Card.findAll({ where: { id: req.params.card_id } }).then(function (dbReturn) {
+      res.json(dbReturn); 
     });
   });
 
@@ -64,6 +71,19 @@ module.exports = function (app) {
     });
   });
 
+  // Update an existing card
+  app.put("/api/update/:card_id"), function (req, res, next) {
+    db.Card.update(
+      {question: req.body.question},
+      {question: req.body.answer},
+      {question: req.body.author},
+      
+      {where: { id: req.params.card_id }}
+    )
+    .then(function([ rowsUpdate, [updatedCard] ]) {
+      res.json(updatedCard)
+    })
+  };
   // Delete an example by id
   // app.delete("/api/cards/:card_id", function(req, res) {
   //   db.Card.destroy({ where: { card_id: req.params.card_id } }).then(function(dbReturn) {
