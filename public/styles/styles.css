@@ -179,3 +179,30 @@ label:hover :checked + .card {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.fa-pencil-alt {
+  color: rgb(199, 79, 129)
+}
+/* .fa-pencil-alt {
+  position: relative;
+  left: 80%;
+  top: -40%;
+  color: rgb(0, 99, 228)
+}
+
+.fa-times-circle {
+  position: relative;
+  left: 85%;
+  top: -40%;
+  color: rgb(0, 99, 228)
+}
+
+@media screen and (max-width: 768px) { 
+  .fa-pencil-alt {
+    left: 70%;
+  }
+  
+  .fa-times-circle {
+    left: 75%;
+  } 
+} */
