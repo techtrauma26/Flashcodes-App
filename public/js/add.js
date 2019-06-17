@@ -1,8 +1,8 @@
 $(document).ready(function () {
  
-  // Initialize the Modal
+  // Initialize the Modals
   $('#formModal').modal();
-
+  
   // Get references to page elements
   const $categoryText = $("#category-menu");
   const $questionText = $("#question-text");
@@ -37,11 +37,12 @@ $(document).ready(function () {
         data: card
       }).then(function () {
         console.log("Successfully added new card to DB.");
+        M.toast({html: 'Card successfully added!', classes: 'rounded', displayLength: 1500, outDuration: 600});
         // clear out the text from the entry fields and return dropdown to default value.
         $questionText.val("");
         $answerDescription.val("");
         $categoryText.val("default");
-        $authorText.val("");
+
       });
     }
     // if the form wasn't properly filled out, show the user a modal.

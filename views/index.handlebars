@@ -25,7 +25,7 @@
     }
 
     .bgimg-2,
-    .bgimg-3 {
+    .bgimg-3, .bgimg-1{
         position: relative;
         opacity: 0.65;
         background-attachment: fixed;
@@ -46,7 +46,7 @@
     }
 
     .bgimg-1 {
-        background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+        background-image: url("https://www.act-on.com/blog/wp-content/uploads/2017/10/blog-title-google-rankbrain-speechwave-351x200.jpg");
         min-height: 100%;
         position: relative;
         background-attachment: fixed;
@@ -57,7 +57,7 @@
 
     .bgimg-2 {
         background-image: url("https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80");
-        min-height: 400px;
+        min-height: 100%;
     }
 
     .bgimg-3 {
@@ -77,15 +77,14 @@
     h3 {
         letter-spacing: 5px;
         text-transform: uppercase;
-        font: 20px "Lato", sans-serif;
+        font: 23px "Lato", sans-serif;
         color: #111;
     }
     /* Turn off parallax scrolling for tablets and phones */
     @media only screen and (max-device-width: 1024px) {
         .bgimg-1,
         .bgimg-2,
-        .bgimg-3
-        .bgimg-4 {
+        .bgimg-3 .bgimg-4 {
             background-attachment: scroll;
         }
     }
@@ -94,26 +93,27 @@
 
 <body>
     <!-- Header -->
+    {{!-- NEED TO MAKE THE NAVBAR HAVE THE HAMBURGER MOBILE RESPONSIVINESS AS WELL AS MAKE IT TRANSPARANT  --}}
     <nav class="black">
         <div class="nav-wrapper container">
             <ul class="right hide-on-med-and-down">
                 <li class="hoverable"><a href="/add">Create Cards!</a></li>
                 <li class="hoverable"><a href="/cards">View Cards!</a></li>
+                <li class="hoverable"><a href="/cards">Login/SignUp</a></li>
             </ul>
         </div>
     </nav>
     <!-- Main Content -->
-    <!-- Parallex Image 1 -->
-    <div class="bgimg-1" style="background:transparent">
+      <!-- Parallex Image 1 -->
+    <div class="bgimg-1" >
         <div class="container caption">
             <div class="row">
                 <div class="col s12 white-text">
-                    <img src="http://www.edimprovement.org/wp-content/uploads/2018/07/StefanoPasqualin_Flikr.jpg"
-                         alt="brain"
-                         style="width:300px;height:300x; display: block; margin-right: auto; margin-left: auto; width: 40%;">
+                  
                     <h4 class=" pink-text center-align">FLASHCODES</h4>
 
-                    <h6 class="red-text text-lighten-5 center-align">Study in style </h6>
+                    <h6 class="red-text text-lighten-5 center-align">Study in &ltstyle&gt  </h6>
+                   
                 </div>
             </div>
         </div>
@@ -136,42 +136,53 @@
     <!-- Flashcode Features -->
     <div class="container">
         <div class="row">
-            <!-- Feature 1 -->
-            <div class="col m4 s12">
-                <div class="icon-block">
-                    <h2 class="center pink-text">
-                        <i class="material-icons">devices</i>
-                    </h2>
-                    <h5 class="center">Study Anywhere</h5>
-                    <p class="light" style="text-align: center">
-                        Create, publish and study code on the go using any device. Study FlashCodes anywhere and
-                        everywhere.
-                    </p>
+          <!-- Feature 1 -->
+                <div class="col m4 s12">
+                        <p class="z-depth-5"></p>
+                    <div class=" card-panel indigo accent-4  hoverable">
+
+                        <h2 class="center pink-text">
+    <a class="btn-floating btn-large pink pulse"><i class="material-icons">devices</i></a>
+    <br>
+                        </h2>
+                        <h3 class="white-text center">Study Anywhere</h3>
+                        
+                        <p class="white-text " style="text-align: center">
+                            Create, publish and study code on the go using any device. Study FlashCodes anywhere and
+                            everywhere.Using any devices, they 
+                        </p>
+                    </div>
                 </div>
+         <!-- Feature 2 -->
+         <div class="col m4 s12">
+                <p class="z-depth-5"></p>
+            <div class=" card-panel indigo accent-4  hoverable">
+
+                <h2 class="center pink-text">
+<a class="btn-floating btn-large pink pulse"><i class="material-icons">developer_mode</i></a>
+<br>
+                </h2>
+                <h3 class="white-text center">Learn  Faster</h3>
+                
+                <p class="white-text " style="text-align: center">
+                        By utilizing flashcards, you will be retaining the information your learned faster. Practicing what you leanred is a key part of the learning process. Students can recall code faster. 
+                </p>
             </div>
-            <!-- Feature 2 -->
-            <div class="col m4 s12">
-                <div class="icon-block">
-                    <h2 class="center pink-text">
-                        <i class="material-icons">developer_mode</i>
-                    </h2>
-                    <h5 class="center">Learn Faster</h5>
-                    <p class="light" style="text-align: center">
-                        By utilizing flashcards, you will be retaining the information your learned faster. Practicing what you leanred is a key part of the learning process.
+        </div>
+         <!-- Feature 3 -->
+         <div class="col m4 s12">
+                <p class="z-depth-5"></p>
+            <div class=" card-panel indigo accent-4  hoverable">
+
+                <h2 class="center pink-text">
+<a class="btn-floating btn-large pink pulse"><i class="material-icons">import_contacts</i></a>
+<br>
+                </h2>
+                <h3 class="white-text center">Study Smarter</h3>
+                
+                <p class="white-text " style="text-align: center">
+                        Improve your programming skills by creating online studying materials. FlashCodes's simple tools can help students improve recall and learn snippets of code faster. 
                     </p>
-                </div>
-            </div>
-            <!-- Feature 3 -->
-            <div class="col m4 s12">
-                <div class="icon-block">
-                    <h2 class="center pink-text">
-                        <i class="material-icons">import_contacts</i>
-                    </h2>
-                    <h5 class="center">Study Smarter</h5>
-                    <p class="light" style="text-align: center">
-                        Improve your programming skills by creating online studying materials. FlashCodes's simple tools can help students improve recall and learn snippets of code faster.
-                    </p>
-                </div>
             </div>
         </div>
     </div>
@@ -181,8 +192,8 @@
     <!-- Get Started Button : Enters into user's site to study and create flashcards -->
     <div style="position:relative;">
         <div class="indigo accent-4 " style="padding:50px 80px;text-align: center;">
-            <a class="pink red-text text-lighten-5 waves-effect waves-light btn-large"><i class="material-icons left">school</i>Get Started Today!</a>
-        </div>
+            <a class="pink red-text text-lighten-5 waves-effect waves-light btn-large"><i
+                    class="material-icons left">school</i>Get Started Today!</a> </div>
     </div>
     <!-- Parallex Image 4 -->
     <div class="bgimg-4"></div>
@@ -202,7 +213,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" white black-text footer-copyright">
+            <div class=" pink black-text footer-copyright">
                 <div class="container">
                     © 2019 Copyright
                 </div>
